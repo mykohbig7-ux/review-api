@@ -26,4 +26,4 @@ class Review(Base):
     lim_model: Mapped[str] = mapped_column(String(100))
 
     # server_default=func.now() --> 저장 시각을 DB가 채운다.
-    create_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
